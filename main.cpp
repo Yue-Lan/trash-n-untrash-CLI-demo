@@ -152,6 +152,10 @@ int main(int argc, char *argv[])
         trash_file (argv[2]);
     } else if (g_str_equal(argv[1], "--restore-file")) {
         restore_file (argv[2]);
+    } else if (g_str_equal(argv[1], "--show-orig")) {
+        char *orig_path = get_orig_path(argv[2]);
+        //qDebug()<<orig_path;
+        g_free (orig_path);
     }
 
     return 0;
